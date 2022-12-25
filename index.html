@@ -20,7 +20,7 @@
 
 
 <body>
-    <audio id="myaudio" src="song.mp3" autoplay="autoplay" controls="controls" loop="loop">
+    <audio id="myaudio" src="song.mp3" autoplay="autoplay" loop="loop">
 </audio>
 <div id="app" class="container">
     <div style="display: flex; align-items: center; margin-bottom: 12px; margin-top: 12px;">
@@ -48,6 +48,7 @@
 <script>
 new Vue({
     el: "#app",
+    
     data: {
         names: [
             ['空位', 'space'],
@@ -97,6 +98,13 @@ new Vue({
         gce_chem: [5, 11, 17, 19, 21, 24, 30, 31, 33, 37, 40, 41, 42],
         eng_adv: [5, 6, 7, 8, 16, 17, 19, 30, 33, 34, 37, 41, 42],
         math_ai: [2, 7, 8, 9, 12, 16, 17, 19, 24, 28, 31, 34, 37, 40, 42]
+    },
+    mounted: function() {
+        this.$alert('聖誕快樂！', '聖誕快樂！', {
+          confirmButtonText: '确定',
+          callback: action => {
+          }
+        });
     },
     methods: {
         download_pdf() {
